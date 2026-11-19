@@ -18,3 +18,4 @@ gitのコミット日時やタグは登録者が変更できるため、証拠�
 ## 一覧
 | 登録 | 対象 | 公開日 | 魚拓 | 答え合わせ |
 | --- | --- | --- | --- | --- |
+| 20261117-m3-2026Q3 | 2026年第3四半期 | 2026-11-19 | [20261117-m3-2026Q3.md](https://web.archive.org/web/*/https://raw.githubusercontent.com/yoshinaga2015/reos-preregistrations/bf69b2b8905b5fe06500dd081002e0b500f4d458/20261117-m3-2026Q3/20261117-m3-2026Q3.md) [20261117-m3-2026Q3.csv](https://web.archive.org/web/*/https://raw.githubusercontent.com/yoshinaga2015/reos-preregistrations/bf69b2b8905b5fe06500dd081002e0b500f4d458/20261117-m3-2026Q3/20261117-m3-2026Q3.csv) | 未 |
