@@ -8,14 +8,14 @@
 - `*.csv`: 予測(市区町村コード、年、四半期、予測した㎡単価)
 
 ## 公表前に固定されていたことの確かめ方
-1. `*.md` に書かれた sha256 と、`*.csv` のハッシュ値が一致することを確かめる。
-   `shasum -a 256 <ファイル>.csv`(Mac)/ `sha256sum <ファイル>.csv`(Linux)
-2. Internet Archive に、公開直後のファイルが保存されている。保存日時は Internet Archive が記録したもので、登録者は変更できない。下の一覧の「魚拓」から確かめられる。
-3. その保存日時が、対象四半期の公表日より前であることを確かめる。
-
-gitのコミット日時やタグは登録者が変更できるため、証拠としては2を使ってください。
+1. Internet Archive の魚拓(下の一覧)を開き、保存日時が対象四半期の公表日より前であることを確かめる。保存日時は Internet Archive が記録したもので、登録者は変更できない。
+2. 魚拓の中身のハッシュ値が、`*.md` に書かれた sha256 と一致することを確かめる。魚拓のURLの日時の後ろに `id_` を付けると、保存した中身そのものが取れる。圧縮されて返ってくるので `--compressed` を付ける。
+```
+curl -s --compressed "https://web.archive.org/web/<保存日時>id_/<元のURL>" | shasum -a 256
+```
+gitのコミット日時やタグは登録者が変更できるため、証拠としては1と2を使ってください。
 
 ## 一覧
-| 登録 | 対象 | 公開日 | 魚拓 | 答え合わせ |
+| 登録 | 対象 | 魚拓の保存日時(日本時間) | 魚拓 | 答え合わせ |
 | --- | --- | --- | --- | --- |
-| 20261117-m3-2026Q3 | 2026年第3四半期 | 2026-11-19 | [20261117-m3-2026Q3.md](https://web.archive.org/web/*/https://raw.githubusercontent.com/yoshinaga2015/reos-preregistrations/bf69b2b8905b5fe06500dd081002e0b500f4d458/20261117-m3-2026Q3/20261117-m3-2026Q3.md) [20261117-m3-2026Q3.csv](https://web.archive.org/web/*/https://raw.githubusercontent.com/yoshinaga2015/reos-preregistrations/bf69b2b8905b5fe06500dd081002e0b500f4d458/20261117-m3-2026Q3/20261117-m3-2026Q3.csv) | 未 |
+| 20261117-m3-2026Q3 | 2026年第3四半期(488市区町村) | 2026-11-19 23:58 | [md](https://web.archive.org/web/20261119145850/https://raw.githubusercontent.com/yoshinaga2015/reos-preregistrations/bf69b2b8905b5fe06500dd081002e0b500f4d458/20261117-m3-2026Q3/20261117-m3-2026Q3.md) [csv](https://web.archive.org/web/20261119145857/https://raw.githubusercontent.com/yoshinaga2015/reos-preregistrations/bf69b2b8905b5fe06500dd081002e0b500f4d458/20261117-m3-2026Q3/20261117-m3-2026Q3.csv)(sha256 一致を確認済み) | 未 |
